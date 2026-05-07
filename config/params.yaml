@@ -1,0 +1,22 @@
+grid:
+  rows: 10
+  cols: 10
+
+start:
+  x: 0
+  y: 0
+
+goal:
+  x: 9
+  y: 9
+
+robot:
+  linear_velocity: 0.4
+  angular_velocity_limit: 1.0
+
+controller:
+  waypoint_tolerance: 0.1
+
+lqr:
+  Q: [10, 10, 5]
+  R: [1, 1]

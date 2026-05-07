@@ -28,62 +28,62 @@ The robot moves from a start position to a goal position while avoiding obstacle
 
 ## 1. Dynamic Programming Cost Function
 
-The optimal cost is computed using:
+Optimal cost function:
 
-\[
+```math
 J(s) = \min_{a} \left( c(s,a) + J(s') \right)
-\]
+```
 
 Where:
-- \(J(s)\) = cost-to-go from current state
-- \(c(s,a)\) = movement cost
-- \(s'\) = next state
+- `J(s)` = cost-to-go from current state
+- `c(s,a)` = movement cost
+- `s'` = next state
 
 ---
 
 ## 2. Robot Kinematic Model
 
-\[
+Robot motion equations:
+
+```math
 \dot{x} = v \cos(\theta)
-\]
+```
 
-\[
+```math
 \dot{y} = v \sin(\theta)
-\]
+```
 
-\[
+```math
 \dot{\theta} = \omega
-\]
+```
 
 Where:
-- \(v\) = linear velocity
-- \(\omega\) = angular velocity
+- `v` = linear velocity
+- `\omega` = angular velocity
 
 ---
 
 ## 3. LQR Cost Function
 
-\[
+```math
 J = \int_0^\infty (x^TQx + u^TRu)\,dt
-\]
+```
 
 Where:
-- \(Q\) = state weighting matrix
-- \(R\) = control weighting matrix
+- `Q` = state weighting matrix
+- `R` = control weighting matrix
 
 ---
 
 ## 4. LQR Control Law
 
-\[
+```math
 u = -Kx
-\]
+```
 
 Where:
-- \(K\) = optimal gain matrix
-- \(x\) = state error vector
-
----
+- `K` = optimal gain matrix
+- `x` = state error vector
 
 # Project Structure
 

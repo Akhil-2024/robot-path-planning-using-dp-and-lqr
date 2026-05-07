@@ -1,0 +1,103 @@
+# Results
+
+## Simulation Results
+
+The robot successfully navigates from the start position to the goal position while avoiding obstacles using Dynamic Programming and LQR control.
+
+---
+
+## 1. Optimal Path Planning
+
+- Dynamic Programming computes the minimum-cost path.
+- Obstacles are avoided during path generation.
+- The planner generates a collision-free trajectory.
+
+Example DP Path:
+
+```text
+S → * → * → * → G
+```
+
+Where:
+- `S` = Start Position
+- `G` = Goal Position
+- `*` = Optimal Path
+
+---
+
+## 2. Smooth Trajectory Tracking
+
+The LQR controller:
+- minimizes tracking error
+- generates smooth control commands
+- reduces oscillations
+- stabilizes robot motion
+
+Control law used:
+
+```math
+u = -Kx
+```
+
+---
+
+## 3. Gazebo Simulation
+
+The robot was simulated successfully in Gazebo using ROS2 Humble.
+
+Simulation includes:
+- robot spawning
+- obstacle environment
+- path following
+- real-time motion control
+
+---
+
+## 4. ROS2 Topic Outputs
+
+### Velocity Commands
+
+```bash
+ros2 topic echo /cmd_vel
+```
+
+Output:
+- linear velocity
+- angular velocity
+
+---
+
+### Odometry Feedback
+
+```bash
+ros2 topic echo /odom
+```
+
+Provides:
+- robot position
+- orientation
+- velocity feedback
+
+---
+
+## 5. Performance Observations
+
+| Parameter | Observation |
+|---|---|
+| Path Planning | Optimal |
+| Obstacle Avoidance | Successful |
+| Tracking Accuracy | High |
+| Motion Smoothness | Smooth |
+| Goal Reaching | Successful |
+
+---
+
+## 6. Final Outcome
+
+The project demonstrates successful integration of:
+- Dynamic Programming
+- LQR Control
+- ROS2
+- Gazebo Simulation
+
+for autonomous robot navigation and trajectory tracking.

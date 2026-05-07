@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ROS2
+build/
+install/
+log/
+
+# VS Code
+.vscode/
+
+# Linux
+.DS_Store
+Thumbs.db
+
+# Gazebo
+*.world
+
+# Temporary files
+*.tmp
+*.bak
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Colcon
+.colcon/
+
+# ROS logs
+*.log

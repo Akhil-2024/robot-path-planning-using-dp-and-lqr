@@ -1,7 +1,11 @@
 # Robot Path Planning using Dynamic Programming and LQR
+
 ## Robot Model View
-![Robot View](doc/images/robot_view.png)
-## Overview
+![Robot View](docs/images/robot_view.png)
+
+---
+
+# Overview
 
 This project implements autonomous robot navigation using:
 
@@ -18,7 +22,7 @@ The robot moves from a start position to a goal position while avoiding obstacle
 
 - Optimal path generation using Dynamic Programming
 - Obstacle avoidance
-- Smooth robot control using LQR
+- Smooth trajectory tracking using LQR
 - Gazebo simulation support
 - ROS2 node-based architecture
 - Real-time odometry and velocity control
@@ -36,7 +40,7 @@ J(s) = \min_{a} \left( c(s,a) + J(s') \right)
 ```
 
 Where:
-- `J(s)` = cost-to-go from current state
+- `J(s)` = cost-to-go from the current state
 - `c(s,a)` = movement cost
 - `s'` = next state
 
@@ -86,6 +90,8 @@ Where:
 - `K` = optimal gain matrix
 - `x` = state error vector
 
+---
+
 # Project Structure
 
 ```text
@@ -96,6 +102,8 @@ robot-path-planning-dp-lqr/
 ├── requirements.txt
 │
 ├── docs/
+│   └── images/
+│
 ├── src/
 ├── urdf/
 ├── launch/
@@ -106,39 +114,50 @@ robot-path-planning-dp-lqr/
 
 # Project Images
 
-## System Block Diagram
-![System Block Diagram](docs/images/system_block_diagram.png)
+## Dynamic Programming Cost Map
+![DP Cost](doc/images/dp_cost.png)
 
 ---
 
-## Project Flowchart
-![Project Flowchart](docs/images/project_flowchart.png)
+## DP Cost Map — Case 2
+![DP Cost Case 2](doc/images/dp_cost_case2.png)
 
 ---
 
-## Grid World Path Planning
-![Grid World Path Planning](docs/images/grid_world_path.png)
+## DP Cost Map — Case 3
+![DP Cost Case 3](doc/images/dp_cost_case3.png)
+
+---
+
+## Optimal Path Output
+![DP Path Output](doc/images/dp_path_output.png)
+
+---
+
+## Path Planning with Red Trajectory
+![DP Path Red Line](doc/images/dp_path_red_line.png)
+
+---
+
+## Path Planning — Case 2
+![DP Path Red Line Case 2](doc/images/dp_path_red_line_case2.png)
+
+---
+
+## Path Planning — Case 3
+![DP Path Red Line Case 3](doc/images/dp_path_red_line_case3.png)
 
 ---
 
 ## Gazebo Robot Simulation
-![Gazebo Robot Simulation](docs/images/gazebo_robot_view.png)
+![Gazebo Robot Simulation](doc/images/gazebo_robot_view.png)
 
 ---
 
 ## Gazebo Terminal Output
-![Gazebo Terminal Output](docs/images/gazebo_terminal_output.png)
+![Gazebo Terminal Output](doc/images/gazebo_terminal_output.png)
 
 ---
-
-## LQR Trajectory Tracking Result
-![LQR Trajectory Tracking](docs/images/lqr_tracking_result.png)
-
----
-
-## Final Path Followed by Robot
-![Final Robot Path](docs/images/final_robot_path.png)
-
 
 # Requirements
 
@@ -149,6 +168,7 @@ pip install -r requirements.txt
 ```
 
 Main dependencies:
+
 - numpy
 - scipy
 - matplotlib
@@ -286,20 +306,18 @@ YOUR_GITHUB_USERNAME
 
 ## Password
 
-Paste:
-- GitHub Personal Access Token (PAT)
-
-NOT your GitHub password.
+Paste your GitHub Personal Access Token (PAT), not your GitHub password.
 
 ---
 
 # Results
 
 The robot:
-- plans optimal path
-- avoids obstacles
-- tracks trajectory smoothly
-- reaches goal successfully
+
+- Plans an optimal path
+- Avoids obstacles successfully
+- Tracks the trajectory smoothly using LQR
+- Reaches the goal position accurately
 
 ---
 
@@ -308,7 +326,7 @@ The robot:
 - SLAM integration
 - Dynamic obstacle avoidance
 - Reinforcement Learning
-- MPC-based tracking
+- MPC-based trajectory tracking
 - Multi-robot coordination
 
 ---
@@ -322,4 +340,4 @@ M.Tech, IIT Delhi
 
 # License
 
-This project is for academic and research purposes.
+This project is intended for academic and research purposes.

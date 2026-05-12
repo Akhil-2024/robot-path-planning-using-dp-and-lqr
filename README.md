@@ -103,6 +103,42 @@ robot-path-planning-dp-lqr/
 
 ---
 
+# Project Images
+
+## System Block Diagram
+![System Block Diagram](docs/images/system_block_diagram.png)
+
+---
+
+## Project Flowchart
+![Project Flowchart](docs/images/project_flowchart.png)
+
+---
+
+## Grid World Path Planning
+![Grid World Path Planning](docs/images/grid_world_path.png)
+
+---
+
+## Gazebo Robot Simulation
+![Gazebo Robot Simulation](docs/images/gazebo_robot_view.png)
+
+---
+
+## Gazebo Terminal Output
+![Gazebo Terminal Output](docs/images/gazebo_terminal_output.png)
+
+---
+
+## LQR Trajectory Tracking Result
+![LQR Trajectory Tracking](docs/images/lqr_tracking_result.png)
+
+---
+
+## Final Path Followed by Robot
+![Final Robot Path](docs/images/final_robot_path.png)
+
+
 # Requirements
 
 Install dependencies:

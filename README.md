@@ -1,7 +1,7 @@
 # Robot Path Planning using Dynamic Programming and LQR
 
 ## Robot Model View
-![Robot View](docs/images/robot_view.png)
+![Robot View](doc/images/robot_view.png)
 
 ---
 
